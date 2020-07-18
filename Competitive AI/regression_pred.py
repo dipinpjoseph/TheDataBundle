@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/correlation-and-regression-lines-7/problem
+# https://www.hackerrank.com/challenges/correlation-and-regression-lines-8/problem
 
 p_s = [ 15,  12,  8,   8,   7,   7,   7,   6,   5,   3]
 h_s = [ 10,  25,  17,  11,  13,  17,  20,  13,  9,   15]
@@ -14,4 +14,8 @@ den = (sum([x**2 for x in diff_p_s]))
 
 slope_m = num/den
 
-print(round(slope_m,3))
+intercept = mean_h_s - mean_p_s*slope_m
+
+pred = slope_m*10+intercept
+
+print(round(pred,1))
